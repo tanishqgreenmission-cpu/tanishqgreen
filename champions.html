@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Champions - Tanishq Green Mission</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f8fff8;
+}
+
+.hero{
+    background:linear-gradient(135deg,#dcfce7,#bbf7d0);
+    color:#166534;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card h2{
+    color:#16a34a;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#4b5563;
+    line-height:1.7;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:40px;
+    background:#22c55e;
+    color:white;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:12px;
+    font-weight:600;
+}
+
+.back-btn:hover{
+    background:#16a34a;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>Green Champions</h1>
+    <p>Recognizing individuals creating positive environmental impact.</p>
+</section>
+
+<div class="container">
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="/champions1.jpg" alt="Champion 1">
+
+            <div class="card-content">
+                <h2>Volunteer Leader</h2>
+                <p>
+                    Leading plantation drives and motivating local
+                    communities to participate in environmental activities.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/champions2.jpg" alt="Champion 2">
+
+            <div class="card-content">
+                <h2>Student Champion</h2>
+                <p>
+                    Inspiring young minds through awareness programs
+                    and sustainability campaigns.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/champions3.jpg" alt="Champion 3">
+
+            <div class="card-content">
+                <h2>Community Partner</h2>
+                <p>
+                    Supporting green initiatives and helping build
+                    sustainable communities.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="/" class="back-btn">
+        ← Back to Home
+    </a>
+
+</div>
+
+</body>
+</html>
