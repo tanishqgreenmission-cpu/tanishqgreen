@@ -1,19 +1,39 @@
 /**
  * Sends form data to Google Sheets via Apps Script web app.
- * Uses hidden form POST — most reliable way to populate e.parameter in Apps Script.
+ * Uses hidden form POST — most reliable for Google Apps Script.
  */
+
+const SUBMIT_COOLDOWN_MS = 60_000;
+const COOLDOWN_KEY = "tgm_last_form_submit";
+
+function assertSubmitCooldown() {
+  const last = sessionStorage.getItem(COOLDOWN_KEY);
+  if (last && Date.now() - Number(last) < SUBMIT_COOLDOWN_MS) {
+    const seconds = Math.ceil((SUBMIT_COOLDOWN_MS - (Date.now() - Number(last))) / 1000);
+    throw new Error(
+      `Please wait ${seconds} seconds before submitting again. Google limits how often forms can be saved.`
+    );
+  }
+}
+
+function markSubmitted() {
+  sessionStorage.setItem(COOLDOWN_KEY, String(Date.now()));
+}
+
 export async function submitToGoogleSheet(payload) {
   const url = import.meta.env.VITE_GOOGLE_SCRIPT_URL?.trim();
 
   if (!url) {
     throw new Error(
-      "Google Sheets URL is missing. Add VITE_GOOGLE_SCRIPT_URL to your .env file."
+      "Form is not configured on this deployment. Add VITE_GOOGLE_SCRIPT_URL before building for GitHub Pages."
     );
   }
 
   if (!url.includes("script.google.com/macros/s/") || !url.endsWith("/exec")) {
     throw new Error("Invalid Google Script URL. It must end with /exec");
   }
+
+  assertSubmitCooldown();
 
   const data = {
     type: payload.type || "",
@@ -26,7 +46,10 @@ export async function submitToGoogleSheet(payload) {
     amount: payload.amount || "",
   };
 
-  return submitViaHiddenForm(url, data);
+  await submitViaHiddenForm(url, data);
+  markSubmitted();
+
+  return { success: true, message: "Data saved successfully" };
 }
 
 function submitViaHiddenForm(url, data) {
@@ -54,13 +77,17 @@ function submitViaHiddenForm(url, data) {
 
     const timeout = setTimeout(() => {
       form.remove();
-      resolve({ success: true, message: "Data saved successfully" });
+      resolve();
     }, 5000);
 
     iframe.onerror = () => {
       clearTimeout(timeout);
       form.remove();
-      reject(new Error("Could not reach Google Sheets. Check your script URL."));
+      reject(
+        new Error(
+          "Could not reach Google Sheets. If you see 'rate limit exceeded', wait 1 hour and try again."
+        )
+      );
     };
 
     document.body.appendChild(iframe);

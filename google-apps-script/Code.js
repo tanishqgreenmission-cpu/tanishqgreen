@@ -1,11 +1,10 @@
 /**
  * PASTE THIS ENTIRE FILE in Google Sheet → Extensions → Apps Script
  *
- * After pasting:
- * 1. Save
- * 2. Run "testAppend" — confirm row appears in sheet
- * 3. Deploy → Manage deployments → Edit → Version: NEW VERSION → Deploy
- *    (Editor runs latest code; the website only runs the DEPLOYED version!)
+ * After pasting: Save → Deploy → Manage deployments → Edit → New version → Deploy
+ * Execute as: Me | Who has access: Anyone
+ *
+ * Tip: Remove the Debug sheet tab if you created one earlier — it used extra quota.
  */
 
 function getRegistrationSheet() {
@@ -70,31 +69,10 @@ function ensureHeaders(sheet) {
   ]);
 }
 
-function logWebRequest(e, data) {
-  try {
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
-    let debug = ss.getSheetByName("Debug");
-    if (!debug) {
-      debug = ss.insertSheet("Debug");
-      debug.appendRow(["Timestamp", "Parameters", "Post body", "Parsed name"]);
-    }
-    debug.appendRow([
-      new Date(),
-      JSON.stringify(e.parameter || {}),
-      e.postData ? e.postData.contents : "",
-      data.name || "(empty)",
-    ]);
-  } catch (err) {
-    // ignore debug errors
-  }
-}
-
 function doPost(e) {
   try {
     const sheet = getRegistrationSheet();
     const data = parseRequestData(e);
-
-    logWebRequest(e, data);
 
     ensureHeaders(sheet);
 
