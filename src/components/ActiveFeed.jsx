@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FEED_ITEMS } from "../data/content";
+import { FEED_ITEMS, IMAGES } from "../data/content";
 
 const FILTERS = ["All", "Bengaluru Campus", "Chittoor District", "Announcements"];
 
@@ -37,7 +37,7 @@ export default function ActiveFeed() {
               src={item.image}
               alt={item.title}
               className="w-full h-40 object-cover"
-              onError={(e) => { e.currentTarget.src = "/images/hero1.jpg"; }}
+              onError={(e) => { e.currentTarget.src = IMAGES.heroFamily; }}
             />
             <div className="p-4">
               <h3 className="text-[#013220] font-bold text-sm leading-snug">

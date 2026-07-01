@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { imageUrl } from "../lib/imageUrl";
 import {
   FaFacebookF,
   FaInstagram,
@@ -13,7 +14,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-1">
             <img
-              src="/logo.svg"
+              src={imageUrl("logo.svg")}
               alt="Tanishq Green Mission"
               className="h-12 w-auto"
             />

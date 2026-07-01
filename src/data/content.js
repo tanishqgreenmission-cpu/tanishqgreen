@@ -1,23 +1,25 @@
+import { imageUrl } from "../lib/imageUrl";
+
 /* All images served locally from /public/images/ */
 export const IMAGES = {
-  heroFamily: "/images/hero-slide1.jpg",
-  heroPlanting: "/images/hero2.jpg",
-  heroCommunity: "/images/hero-slide4.jpg",
-  heroSapling: "/images/hero-slide3.jpg",
-  heroLaunch: "/images/hero-slide2.jpg",
-  heroVillage: "/images/before-after.jpg",
-  feedStudents: "/images/feed1.jpg",
-  feedPlanting: "/images/feed2.jpg",
-  feedVillage: "/images/feed3.jpg",
-  feedClean: "/images/feed4.jpg",
-  champion1: "/images/champion1.jpg",
-  champion2: "/images/champion2.jpg",
-  champion3: "/images/champion3.jpg",
-  about: "/images/hero2.jpg",
-  join: "/images/join.jpg",
-  sapling: "/images/sapling.jpg",
-  pledge: "/images/pledge.jpg",
-  forest: "/images/before-after.jpg",
+  heroFamily: imageUrl("images/hero-slide1.jpg"),
+  heroPlanting: imageUrl("images/hero2.jpg"),
+  heroCommunity: imageUrl("images/hero-slide4.jpg"),
+  heroSapling: imageUrl("images/hero-slide3.jpg"),
+  heroLaunch: imageUrl("images/hero-slide2.jpg"),
+  heroVillage: imageUrl("images/before-after.jpg"),
+  feedStudents: imageUrl("images/feed1.jpg"),
+  feedPlanting: imageUrl("images/feed2.jpg"),
+  feedVillage: imageUrl("images/feed3.jpg"),
+  feedClean: imageUrl("images/feed4.jpg"),
+  champion1: imageUrl("images/champion1.jpg"),
+  champion2: imageUrl("images/champion2.jpg"),
+  champion3: imageUrl("images/champion3.jpg"),
+  about: imageUrl("images/hero2.jpg"),
+  join: imageUrl("images/join.jpg"),
+  sapling: imageUrl("images/sapling.jpg"),
+  pledge: imageUrl("images/pledge.jpg"),
+  forest: imageUrl("images/before-after.jpg"),
 };
 
 export const HERO_SLIDES = [

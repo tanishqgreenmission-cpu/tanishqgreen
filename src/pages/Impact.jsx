@@ -10,7 +10,7 @@ function PageImage({ src, alt, className }) {
       src={src}
       alt={alt}
       className={className}
-      onError={(e) => { e.currentTarget.src = "/images/impact-header.jpg"; }}
+      onError={(e) => { e.currentTarget.src = IMPACT_PAGE.header; }}
     />
   );
 }

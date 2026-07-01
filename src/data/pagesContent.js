@@ -1,9 +1,11 @@
+import { imageUrl } from "../lib/imageUrl";
+
 /* Page-specific content — images and copy unique to each inner page (not used on Home) */
 
 export const PILLARS_PAGE = {
-  header: "/images/pillars-header.jpg",
+  header: imageUrl("images/pillars-header.jpg"),
   story: {
-    image: "/images/pillars-story.jpg",
+    image: imageUrl("images/pillars-story.jpg"),
     title: "Who We Are",
     text: "Tanishq Green Mission began as a grassroots movement in Andhra Pradesh and Karnataka, uniting families, schools, and gram panchayats under one simple belief: every home can grow a tree, and every tree can change a community. Today we operate across Bengaluru campuses and Chittoor District villages with structured programmes, volunteer networks, and measurable environmental outcomes.",
   },
@@ -12,7 +14,7 @@ export const PILLARS_PAGE = {
       id: "house",
       icon: "🌳",
       title: "One House One Plant",
-      image: "/images/pillars-house.jpg",
+      image: imageUrl("images/pillars-house.jpg"),
       description:
         "Every registered household receives a native sapling — Lemon, Guava, or Amla — along with soil preparation guidance, a watering schedule, and quarterly follow-up visits to ensure survival beyond the first monsoon.",
       highlights: ["Free sapling distribution", "Home visit support", "Survival tracking app"],
@@ -21,7 +23,7 @@ export const PILLARS_PAGE = {
       id: "campus",
       icon: "🏫",
       title: "Green Campus Challenge",
-      image: "/images/pillars-campus.jpg",
+      image: imageUrl("images/pillars-campus.jpg"),
       description:
         "Colleges and schools in Bengaluru compete across plantation density, waste segregation, rainwater harvesting, and student-led awareness campaigns. Top campuses earn the Green Campus Trophy and seed grants for next season.",
       highlights: ["Inter-college leaderboard", "Student ambassador programme", "Annual Green Campus Awards"],
@@ -30,7 +32,7 @@ export const PILLARS_PAGE = {
       id: "village",
       icon: "🏘️",
       title: "Village Cleanliness",
-      image: "/images/pillars-village.jpg",
+      image: imageUrl("images/pillars-village.jpg"),
       description:
         "Gram panchayats in Chittoor District adopt TGM cleanliness protocols — morning broom drives, waste segregation lanes, drain clearing, and public-space greening with community accountability charts displayed at the mandal office.",
       highlights: ["Broom zone mapping", "Weekly mandal audits", "Village head partnerships"],
@@ -39,7 +41,7 @@ export const PILLARS_PAGE = {
       id: "basket",
       icon: "🧺",
       title: "Mana Inti Basket",
-      image: "/images/pillars-basket.jpg",
+      image: imageUrl("images/pillars-basket.jpg"),
       description:
         "A subscription service delivering eco-friendly household essentials — bamboo toothbrushes, cloth bags, organic cleaners, and seasonal native seeds — sourced from local artisans and women self-help groups.",
       highlights: ["Monthly subscription", "Local artisan support", "Zero-waste starter kits"],
@@ -65,13 +67,13 @@ export const PILLARS_PAGE = {
 };
 
 export const ACTION_PAGE = {
-  header: "/images/action-header.jpg",
+  header: imageUrl("images/action-header.jpg"),
   initiatives: [
     {
       id: "sapling",
       icon: "🌱",
       title: "Claim Your Sapling",
-      image: "/images/action-sapling.jpg",
+      image: imageUrl("images/action-sapling.jpg"),
       description:
         "Register your household for the One House One Plant programme. Choose Lemon, Guava, or Amla and receive your sapling kit at the nearest distribution centre in Bengaluru or Chittoor.",
       cta: "Register Now",
@@ -81,7 +83,7 @@ export const ACTION_PAGE = {
       id: "guides",
       icon: "📖",
       title: "Plant Care Guides",
-      image: "/images/action-guides.jpg",
+      image: imageUrl("images/action-guides.jpg"),
       description:
         "Download step-by-step guides for each native species — soil mix ratios, monsoon watering, organic pest control, and harvest timelines tailored to South Indian climates.",
       cta: "Download Guides",
@@ -91,7 +93,7 @@ export const ACTION_PAGE = {
       id: "cleanliness",
       icon: "🧹",
       title: "Village Cleanliness Protocols",
-      image: "/images/action-clean.jpg",
+      image: imageUrl("images/action-clean.jpg"),
       description:
         "Access the official TGM cleanliness manual used across Chittoor gram panchayats — covering waste lanes, drain maintenance, public toilet upkeep, and weekly audit checklists.",
       cta: "View Protocols",
@@ -101,7 +103,7 @@ export const ACTION_PAGE = {
       id: "map",
       icon: "🗺️",
       title: "Broom Map & Cleanliness Zones",
-      image: "/images/action-map.jpg",
+      image: imageUrl("images/action-map.jpg"),
       description:
         "View interactive zone maps for your mandal. Assign volunteer teams to specific streets, track completion status, and report blockages through the TGM field app.",
       cta: "Open Zone Map",
@@ -111,27 +113,27 @@ export const ACTION_PAGE = {
   species: [
     {
       name: "Lemon (Nimma)",
-      image: "/images/action-lemon.jpg",
+      image: imageUrl("images/action-lemon.jpg"),
       season: "Plant: June–August",
       care: "Water twice weekly. Full sun. Harvest in 2–3 years.",
     },
     {
       name: "Guava (Jama)",
-      image: "/images/action-guava.jpg",
+      image: imageUrl("images/action-guava.jpg"),
       season: "Plant: July–September",
       care: "Moderate watering. Partial shade OK. Bears fruit in 3–4 years.",
     },
     {
       name: "Amla (Usiri)",
-      image: "/images/action-amla.jpg",
+      image: imageUrl("images/action-amla.jpg"),
       season: "Plant: June–July",
       care: "Drought-tolerant once established. Rich in Vitamin C. Harvest in 4–5 years.",
     },
   ],
   events: [
-    { date: "July 5, 2026", title: "One House One Plant Launch", location: "Bengaluru & Chittoor District", image: "/images/action-event.jpg" },
-    { date: "July 12, 2026", title: "Green Campus Challenge Kickoff", location: "Bengaluru University Campus", image: "/images/action-volunteer.jpg" },
-    { date: "July 19, 2026", title: "V. Kota Mandal Cleanliness Drive", location: "Chittoor District", image: "/images/contact-community.jpg" },
+    { date: "July 5, 2026", title: "One House One Plant Launch", location: "Bengaluru & Chittoor District", image: imageUrl("images/action-event.jpg") },
+    { date: "July 12, 2026", title: "Green Campus Challenge Kickoff", location: "Bengaluru University Campus", image: imageUrl("images/action-volunteer.jpg") },
+    { date: "July 19, 2026", title: "V. Kota Mandal Cleanliness Drive", location: "Chittoor District", image: imageUrl("images/contact-community.jpg") },
   ],
   steps: [
     { step: "01", title: "Register", desc: "Sign up as a household, volunteer, or campus team through our portal." },
@@ -147,7 +149,7 @@ export const ACTION_PAGE = {
 };
 
 export const IMPACT_PAGE = {
-  header: "/images/impact-header.jpg",
+  header: imageUrl("images/impact-header.jpg"),
   stats: [
     { value: "29,570+", label: "Saplings Planted", sub: "Across 20+ communities" },
     { value: "87%", label: "Survival Rate", sub: "After first monsoon season" },
@@ -157,31 +159,31 @@ export const IMPACT_PAGE = {
   districts: [
     {
       name: "Bengaluru Campus Zone",
-      image: "/images/impact-bengaluru.jpg",
+      image: imageUrl("images/impact-bengaluru.jpg"),
       saplings: "14,200+",
       campuses: "18 colleges",
       highlight: "Green Campus Challenge leader: RV College of Engineering",
     },
     {
       name: "Chittoor District",
-      image: "/images/impact-chittoor.jpg",
+      image: imageUrl("images/impact-chittoor.jpg"),
       saplings: "15,370+",
       campuses: "24 gram panchayats",
       highlight: "V. Kota Mandal — first to cross 500 saplings",
     },
   ],
   champions: [
-    { name: "Aishwarya Singh", role: "Student Leader", image: "/images/champion4.jpg", bio: "Mobilised 12 colleges for the Green Campus Challenge in Bengaluru.", planted: "340 saplings" },
-    { name: "Ravi Kumar", role: "Village Head", image: "/images/champion5.jpg", bio: "Led V. Kota Mandal to 500+ saplings and weekly cleanliness audits.", planted: "500+ saplings" },
-    { name: "Priya Sharma", role: "Field Coordinator", image: "/images/champion6.jpg", bio: "Coordinates sapling distribution and follow-up visits across Chittoor.", planted: "280 saplings" },
-    { name: "Karthik Reddy", role: "Nursery Manager", image: "/images/champion7.jpg", bio: "Runs the native sapling nursery supplying Lemon, Guava, and Amla.", planted: "2,000+ saplings" },
-    { name: "Lakshmi Devi", role: "SHG Leader", image: "/images/champion8.jpg", bio: "Leads Mana Inti Basket production with 30 women artisans.", planted: "150 saplings" },
-    { name: "Arjun Nair", role: "Youth Ambassador", image: "/images/champion9.jpg", bio: "Spreads climate awareness through school workshops in Bengaluru.", planted: "210 saplings" },
+    { name: "Aishwarya Singh", role: "Student Leader", image: imageUrl("images/champion4.jpg"), bio: "Mobilised 12 colleges for the Green Campus Challenge in Bengaluru.", planted: "340 saplings" },
+    { name: "Ravi Kumar", role: "Village Head", image: imageUrl("images/champion5.jpg"), bio: "Led V. Kota Mandal to 500+ saplings and weekly cleanliness audits.", planted: "500+ saplings" },
+    { name: "Priya Sharma", role: "Field Coordinator", image: imageUrl("images/champion6.jpg"), bio: "Coordinates sapling distribution and follow-up visits across Chittoor.", planted: "280 saplings" },
+    { name: "Karthik Reddy", role: "Nursery Manager", image: imageUrl("images/champion7.jpg"), bio: "Runs the native sapling nursery supplying Lemon, Guava, and Amla.", planted: "2,000+ saplings" },
+    { name: "Lakshmi Devi", role: "SHG Leader", image: imageUrl("images/champion8.jpg"), bio: "Leads Mana Inti Basket production with 30 women artisans.", planted: "150 saplings" },
+    { name: "Arjun Nair", role: "Youth Ambassador", image: imageUrl("images/champion9.jpg"), bio: "Spreads climate awareness through school workshops in Bengaluru.", planted: "210 saplings" },
   ],
   benefits: [
-    { icon: "🌬️", title: "Cleaner Air", image: "/images/impact-bengaluru.jpg", text: "Native trees in urban campuses reduce particulate matter and cool surrounding areas by up to 3°C." },
-    { icon: "💧", title: "Water Security", image: "/images/impact-water.jpg", text: "Tree roots improve groundwater recharge. Chittoor villages report better well levels after plantation drives." },
-    { icon: "🦋", title: "Biodiversity", image: "/images/impact-wildlife.jpg", text: "Amla and Guava trees attract native birds and pollinators, restoring micro-ecosystems in both cities and villages." },
+    { icon: "🌬️", title: "Cleaner Air", image: imageUrl("images/impact-bengaluru.jpg"), text: "Native trees in urban campuses reduce particulate matter and cool surrounding areas by up to 3°C." },
+    { icon: "💧", title: "Water Security", image: imageUrl("images/impact-water.jpg"), text: "Tree roots improve groundwater recharge. Chittoor villages report better well levels after plantation drives." },
+    { icon: "🦋", title: "Biodiversity", image: imageUrl("images/impact-wildlife.jpg"), text: "Amla and Guava trees attract native birds and pollinators, restoring micro-ecosystems in both cities and villages." },
   ],
   milestones: [
     { month: "Jan 2026", text: "Crossed 20,000 saplings planted milestone." },
@@ -192,7 +194,7 @@ export const IMPACT_PAGE = {
 };
 
 export const CONTACT_PAGE = {
-  header: "/images/contact-header.jpg",
+  header: imageUrl("images/contact-header.jpg"),
   channels: [
     { icon: "📧", title: "Email Us", value: "Tanishqgreenmission@gmail.com", desc: "General enquiries, partnerships, and media requests." },
     { icon: "📞", title: "Call Us", value: "+91 7483703173", desc: "Mon–Sat, 9 AM – 6 PM. Mission helpdesk for sapling claims." },
@@ -201,19 +203,19 @@ export const CONTACT_PAGE = {
   pathways: [
     {
       title: "Volunteer",
-      image: "/images/contact-volunteer.jpg",
+      image: imageUrl("images/contact-volunteer.jpg"),
       desc: "Join plantation drives, campus events, and village cleanliness programmes. Receive a TGM volunteer certificate after 10 hours of service.",
       link: "#join",
     },
     {
       title: "Corporate Partner",
-      image: "/images/contact-partner.jpg",
+      image: imageUrl("images/contact-partner.jpg"),
       desc: "Sponsor sapling batches, adopt a gram panchayat, or organise employee volunteering days with measurable CSR reporting.",
       link: "#join",
     },
     {
       title: "Community Group",
-      image: "/images/contact-community.jpg",
+      image: imageUrl("images/contact-community.jpg"),
       desc: "Register your RWA, college club, or SHG to receive sapling kits, training, and co-branded event support from TGM.",
       link: "#join",
     },
@@ -241,7 +243,7 @@ export const CONTACT_PAGE = {
     { label: "Facebook", handle: "Tanishq Green Mission", url: "https://www.facebook.com" },
   ],
   intro: {
-    image: "/images/contact-volunteer.jpg",
+    image: imageUrl("images/contact-volunteer.jpg"),
     title: "We're Here to Help You Go Green",
     text: "Whether you want to claim a sapling, volunteer at a plantation drive, partner as a corporate, or simply ask a question — our mission helpdesk is ready to guide you every step of the way.",
   },

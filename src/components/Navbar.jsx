@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { imageUrl } from "../lib/imageUrl";
 
 const NAV_LINKS = [
   { to: "/", label: "Home" },
@@ -18,10 +19,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
         <Link to="/" className="shrink-0 flex items-center gap-3">
           <img
-            src="/logo.png"
+            src={imageUrl("logo.png")}
             alt="Tanishq Green Mission"
             className="h-11 w-auto"
-            onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = "/logo.svg"; }}
+            onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = imageUrl("logo.svg"); }}
           />
         </Link>
 

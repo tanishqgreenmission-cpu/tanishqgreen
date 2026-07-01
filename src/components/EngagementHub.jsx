@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaFilePdf } from "react-icons/fa";
-import { CHAMPIONS, NOTIFICATIONS } from "../data/content";
+import { CHAMPIONS, NOTIFICATIONS, IMAGES } from "../data/content";
 
 const DAYS = ["S", "M", "T", "W", "T", "F", "S"];
 const JULY_2026 = Array.from({ length: 31 }, (_, i) => i + 1);
@@ -68,7 +68,7 @@ export default function EngagementHub() {
                 src={c.image}
                 alt={c.name}
                 className="w-9 h-9 rounded-full object-cover border border-[#D4AF37]"
-                onError={(e) => { e.currentTarget.src = "/images/champion1.jpg"; }}
+                onError={(e) => { e.currentTarget.src = IMAGES.champion1; }}
               />
               <div>
                 <p className="text-[#D4AF37] text-sm font-semibold leading-tight">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { IMAGES, PLEDGE_ITEMS } from "../data/content";
+import { imageUrl } from "../lib/imageUrl";
 
 export function MissionBanner() {
   return (
@@ -54,7 +55,7 @@ export function BeforeAfterSection() {
         <div className="grid md:grid-cols-2 gap-6">
           <div className="relative rounded-xl overflow-hidden border-2 border-gray-300 h-64 md:h-80">
             <img
-              src="/images/hero1.jpg"
+              src={imageUrl("images/hero1.jpg")}
               alt="Without trees"
               className="w-full h-full object-cover grayscale brightness-75"
               onError={(e) => { e.currentTarget.src = IMAGES.heroFamily; }}
@@ -161,7 +162,7 @@ export function CtaBanner() {
   return (
     <section className="py-14 bg-gradient-to-r from-[#0a4d2e] to-[#013220] border-y border-[#D4AF37]/30">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <img src="/logo.svg" alt="TGM" className="h-14 mx-auto mb-4" />
+        <img src={imageUrl("logo.svg")} alt="TGM" className="h-14 mx-auto mb-4" />
         <h2 className="text-2xl md:text-3xl font-bold text-[#D4AF37] font-serif">
           Let&apos;s Build a Greener Tomorrow
         </h2>

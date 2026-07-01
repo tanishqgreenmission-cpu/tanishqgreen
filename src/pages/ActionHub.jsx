@@ -10,7 +10,7 @@ function PageImage({ src, alt, className }) {
       src={src}
       alt={alt}
       className={className}
-      onError={(e) => { e.currentTarget.src = "/images/action-header.jpg"; }}
+      onError={(e) => { e.currentTarget.src = ACTION_PAGE.header; }}
     />
   );
 }
